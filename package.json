@@ -8,14 +8,18 @@
 		"CRLF",
 		"UTF8"
 	],
-	"author": "Bill Ticehurst",
+	"author": "Bill Ticehurst <billti@hotmail.com>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/billti/chelf"
+	},
+	"license": "MIT",
 	"main": "./lib/main.js",
 	"bin": "./bin/cli.js",
 	"scripts": {
 		"compile": "jake clean build",
 		"test": "jake test"
 	},
-	"dependencies": {},
 	"devDependencies": {
 		"jake": ">=0.5.8",
 		"typescript": ">=0.9.0"
