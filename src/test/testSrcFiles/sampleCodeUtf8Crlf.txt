@@ -1,0 +1,14 @@
+﻿// Header info (c)
+
+
+function x(){return;}
+// Not much code in here
+
+
+
+
+var result = true;
+var greeting = "hello, world";
+var bestLanguageEver = "TypeScript";
+
+// EOF

@@ -1,0 +1,9 @@
+
+Some test preceded by a \n
+	This is indented with a tab
+I'll finish this with two \r	A tab to start and finish this line.	
+Two \r\n after this line
+
+Two \r after this lino \n after this line
+
+Total CR = 04. LF = 04. CRLF = 06. HT = 03. Finish up with a \n

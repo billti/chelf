@@ -1,0 +1,34 @@
+var fs = require('fs');
+
+task('default', ['build', 'test']);
+
+new jake.TestTask('Chelf', function(){
+	if(!fs.existsSync('./test')){
+		jake.mkdirP('./test');
+	}
+	if(fs.existsSync('./test/testSrcFiles')){
+		jake.rmRf('./test/testSrcFiles');
+	}
+	jake.cpR('./src/test/testSrcFiles', './test');
+	this.testFiles.include('./test/*.js');
+});
+
+task('clean', function() {
+	if(fs.existsSync('./lib')){
+		jake.rmRf('./lib');
+	}
+	if(fs.existsSync('./test')){
+		jake.rmRf('./test');
+	}
+});
+
+task('build', {'async': true}, function() {
+	var list = new jake.FileList();
+	list.include('./src/lib/*.ts');
+	list.include('./src/test/*.ts');
+	var buildCmd = 'tsc --module Node --target ES5 --out ./ ' + list.toArray().join(" ");
+	console.log(buildCmd);
+	jake.exec([buildCmd], function(){
+		complete();
+	});
+});

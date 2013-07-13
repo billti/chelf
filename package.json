@@ -1,0 +1,26 @@
+{
+	"name": "chelf",
+	"version": "0.1.0",
+	"description": "CHeck Encoding and Line Feeds",
+	"keywords": [
+		"text",
+		"encoding",
+		"CRLF",
+		"UTF8"
+	],
+	"author": "Bill Ticehurst",
+	"main": "./lib/main.js",
+	"bin": "./bin/cli.js",
+	"scripts": {
+		"compile": "jake clean build",
+		"test": "jake test"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"jake": ">=0.5.8",
+		"typescript": ">=0.9.0"
+	},
+	"engines": {
+		"node": ">=0.10.0"
+	}
+}
